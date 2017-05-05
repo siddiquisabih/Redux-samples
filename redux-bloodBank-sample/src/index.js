@@ -6,8 +6,9 @@ import { Provider } from "react-redux"
 import store from "./store"
 import * as firebase from "firebase"
 import Routes from "./Components/Router/Routes"
-
-
+import {MuiThemeProvider} from "material-ui"
+// import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
 // Initialize Firebase
 var config = {
@@ -21,11 +22,13 @@ var config = {
 firebase.initializeApp(config);
 
 ReactDOM.render(
+
   <Provider store={store}>
-
+  <MuiThemeProvider>
     <Routes />
-
+</MuiThemeProvider>
   </Provider>
+  
   ,
   document.getElementById('root')
 );

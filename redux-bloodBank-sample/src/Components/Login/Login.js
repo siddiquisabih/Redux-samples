@@ -3,6 +3,9 @@ import Firebase from "../../store/Middleware/firebase"
 import { connect } from "react-redux"
 import { browserHistory } from "react-router"
 
+import {TextField , RaisedButton} from "material-ui"
+
+
 function mapStateToProps(state) {
     return {
 
@@ -34,8 +37,8 @@ class Login extends Component {
 
     loginUser() {
         let emailAndPass = {
-            email: this.refs.email.value,
-            pass: this.refs.pass.value
+            email: this.refs.email.getValue(),
+            pass: this.refs.pass.getValue()
         }
         this.props.loginMethod(emailAndPass)
     }
@@ -43,9 +46,18 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <input type="text" placeholder="Email" ref="email" defaultValue="s@m.com" /><br />
-                <input type="password" placeholder="password" ref="pass" defaultValue="sabihsiddiqui" /><br />
-                <input type="button" onClick={this.loginUser} value="Login" />
+
+
+<TextField type= "text" hintText="Email"  ref="email" floatingLabelText="Email"/><br/>
+<TextField  type = "password"   hintText="Password" ref="pass" floatingLabelText="Password"/><br/>
+<RaisedButton  primary={true} onClick={this.loginUser.bind(this)}>
+Login
+</RaisedButton>
+
+
+
+     
+
             </div>
         );
     }
