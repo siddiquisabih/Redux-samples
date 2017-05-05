@@ -6,7 +6,8 @@ const initialState = {
     rigister: "false",
     sentData: "false",
     getData: "false",
-    dataArray : []
+    dataArray: [],
+    signout: "false"
 }
 
 const authReducer = (state = initialState, action) => {
@@ -21,7 +22,10 @@ const authReducer = (state = initialState, action) => {
             return Object.assign({}, state, { sentData: "true" })
 
         case Actions.getData:
-            return Object.assign({}, state, { getData: "true" , dataArray : action.data })
+            return Object.assign({}, state, { getData: "true", dataArray: action.data })
+
+        case Actions.signout:
+            return Object.assign({}, state, { signout: "true" })
 
 
         default:

@@ -1,44 +1,44 @@
 import React, { Component } from 'react';
-import {Link} from "react-router"
+import { Link } from "react-router"
 
 class App extends Component {
-    
-    
-    
-    select(){
-        
+
+
+
+    select() {
+
         let userSelect = {
-            bloodSelected : this.refs.blood
+            bloodSelected: this.refs.blood
         }
 
-console.log(userSelect)
+        console.log(userSelect)
 
     }
-    
-    
+
+
     render() {
         return (
             <div>
 
-Blood Bank
+                Blood Bank
 
-<br/>
+<br />
 
-        <Link to="/signup">  <button>
-        Signup</button></Link>
+                <Link to="/signup">  <button>
+                    Signup</button></Link>
 
-        <Link to="/login"><button>
-        Login</button></Link>
+                <Link to="/login"><button>
+                    Login</button></Link>
 
 
-{this.props.children}
+                {this.props.children}
 
-         
-          { //<Signup/>
-        // <Link to="donorlist">  <button>
-        // Click to Donor List
-        // </button></Link>
-    }
+
+                { //<Signup/>
+                    // <Link to="donorlist">  <button>
+                    // Click to Donor List
+                    // </button></Link>
+                }
             </div>
         );
     }

@@ -6,8 +6,7 @@ import Form from "../Donor/DonorForm"
 import Login from "../Login/Login"
 import Signup from "../Signup/Signup"
 import List from "../DonerList/List"
-import Select from "../Selection/Select"
-
+import Signout from "../Signout/signout"
 
 class Routes extends Component {
     render() {
@@ -18,7 +17,8 @@ class Routes extends Component {
                 <Route path="/login" component={Login} />
                 <Route path="/donorForm" component={Form} />
                 <Route path="/donorList" component={List} />
-                <Route path="/selectList" component={Select} />
+                <Route path="/logout" component={Signout} />
+
             </Router>
         );
     }

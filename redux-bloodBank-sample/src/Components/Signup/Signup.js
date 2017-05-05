@@ -27,11 +27,7 @@ class Signup extends Component {
         if (prop.rigister !== false) {
             browserHistory.push('/login')
         }
-        else{
 
-            console.log("chl nikal kisi or ny id ly li yai wali")
-
-        }
     }
 
     SignupMethod() {

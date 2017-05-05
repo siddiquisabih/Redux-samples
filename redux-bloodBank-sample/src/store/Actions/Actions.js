@@ -3,7 +3,7 @@ class Actions {
     static signup = "Signup"
     static login = "Login"
     static getData = "gettingData"
-
+    static signout = "Signout"
     static sentData = "dataSent"
 
     static signupAction() {
@@ -29,12 +29,16 @@ class Actions {
     static gettingDataAction(value) {
         return {
             type: Actions.getData,
-            data : value
-            
+            data: value
+
         }
     }
 
-
+    static signoutUser() {
+        return {
+            type: Actions.signout
+        }
+    }
 
 
 }
