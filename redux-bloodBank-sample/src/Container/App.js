@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router"
 
-import Bar from "../Components/MaterialUi/navBar"
+import Home from "../Component/Material/Home"
 
 class App extends Component {
     render() {
         return (
       
-      <Bar/>
+      <Home/>
       
         );
     }

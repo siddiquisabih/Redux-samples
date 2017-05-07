@@ -2,10 +2,25 @@ import React, { Component } from 'react';
 import Firebase from "../../store/Middleware/firebase"
 import { connect } from "react-redux"
 
+
 // import Actions from "../../store/Actions/Actions"
 import { browserHistory } from "react-router"
-import {TextField , RaisedButton} from "material-ui"
+import { TextField, RaisedButton, Paper } from "material-ui"
 // import * as MUI from "material-ui"
+
+
+
+const style = {
+  height: 200,
+  width: 550,
+  margin: 200,
+  textAlign: 'center',
+  display: 'inline-block',
+};
+
+
+
+
 function mapStateToProps(state) {
     return {
         inistate: state.rigister
@@ -26,7 +41,7 @@ class Signup extends Component {
         if (prop.rigister !== false) {
             browserHistory.push('/login')
 
-            
+
         }
     }
 
@@ -45,19 +60,19 @@ class Signup extends Component {
         return (
             <div>
 
+<Paper style={style} rounded={false} zDepth={5}>
 
-
-<TextField type= "text" hintText="Email"  ref="email" floatingLabelText="Email"/><br/>
-<TextField  type = "password"   hintText="Password" ref="pass" floatingLabelText="Password"/><br/>
-<RaisedButton  primary={true} onClick={this.SignupMethod.bind(this)}>
-Signup
+                <TextField type="text" hintText="Email" ref="email" floatingLabelText="Email" /><br />
+                <TextField type="password" hintText="Password" ref="pass" floatingLabelText="Password" /><br />
+                <RaisedButton primary={true} onClick={this.SignupMethod.bind(this)}>
+                    Signup
 </RaisedButton>
 
-              
 
 
-               
 
+
+</Paper>
             </div>
         );
     }
@@ -67,12 +82,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(Signup);
 
 
 
-{
-
-//  <input type="text" placeholder="Email" ref="email" defaultValue="s@m.com" /><br />
-//                 <input type="password" placeholder="password" ref="pass" defaultValue="sabihsiddiqui" /><br />
-
-                // <input onClick={this.SignupMethod.bind(this)} type="button" value="Signup" />
-
-
-}

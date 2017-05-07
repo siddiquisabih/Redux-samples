@@ -3,7 +3,19 @@ import Firebase from "../../store/Middleware/firebase"
 import { connect } from "react-redux"
 import { browserHistory } from "react-router"
 
-import {TextField , RaisedButton} from "material-ui"
+import { TextField, RaisedButton , Paper } from "material-ui"
+
+const style = {
+  height: 200,
+  width: 550,
+  margin: 200,
+  textAlign: 'center',
+  display: 'inline-block',
+};
+
+
+
+
 
 
 function mapStateToProps(state) {
@@ -31,7 +43,7 @@ class Login extends Component {
 
     componentWillReceiveProps(prop) {
         if (prop.login !== false) {
-            browserHistory.push('/donorForm')
+            browserHistory.push('/home')
         }
     }
 
@@ -47,16 +59,16 @@ class Login extends Component {
         return (
             <div>
 
+            <Paper style={style} zDepth={5} rounded={false}>
 
-<TextField type= "text" hintText="Email"  ref="email" floatingLabelText="Email"/><br/>
-<TextField  type = "password"   hintText="Password" ref="pass" floatingLabelText="Password"/><br/>
-<RaisedButton  primary={true} onClick={this.loginUser.bind(this)}>
-Login
+
+                <TextField type="text" hintText="Email" ref="email" floatingLabelText="Email" /><br />
+                <TextField type="password" hintText="Password" ref="pass" floatingLabelText="Password" /><br />
+                <RaisedButton primary={true} onClick={this.loginUser.bind(this)}>
+                    Login
 </RaisedButton>
+</Paper>
 
-
-
-     
 
             </div>
         );
