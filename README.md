@@ -1,2 +1,1 @@
 # Redux-samples
-Practice Projects
