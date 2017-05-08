@@ -25,6 +25,8 @@ class Firebase {
     static sendingDataToFirebase(data) {
         return (dispatch) => {
             let database = firebase.database().ref().child("dataUsingRedux");
+
+            console.log(data)
             database.push(data);
             dispatch(Actions.sentDataAction())
         }

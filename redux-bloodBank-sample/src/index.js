@@ -7,6 +7,8 @@ import store from "./store"
 import * as firebase from "firebase"
 import Routes from "./Container/Router/Routes"
 import {MuiThemeProvider} from "material-ui"
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 // import getMuiTheme from 'material-ui/styles/getMuiTheme';
 // import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
@@ -20,6 +22,8 @@ var config = {
   messagingSenderId: "560849097238"
 };
 firebase.initializeApp(config);
+
+injectTapEventPlugin();
 
 ReactDOM.render(
 

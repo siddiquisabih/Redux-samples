@@ -7,8 +7,6 @@ import Login from "../Login/Login"
 import Signup from "../Signup/Signup"
 import List from "../DonerList/List"
 import Signout from "../Signout/signout"
-
-import Home from "../../Component/Material/Home"
 import Design from "../../Component/Material/AppBarDesign"
 
 class Routes extends Component {

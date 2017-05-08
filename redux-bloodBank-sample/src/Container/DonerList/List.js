@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import Firebase from "../../store/Middleware/firebase"
-import { RaisedButton , Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from "material-ui"
+import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from "material-ui"
 import Design from "../../Component/Material/AppBarDesign"
+
 
 
 function mapStateToProps(state) {
@@ -34,7 +35,7 @@ class List extends Component {
                             <TableHeaderColumn>Name</TableHeaderColumn>
                             <TableHeaderColumn>Blood Group</TableHeaderColumn>
                             <TableHeaderColumn>Number</TableHeaderColumn>
-                            <TableHeaderColumn>Date Of Birth</TableHeaderColumn>
+                            <TableHeaderColumn>Email</TableHeaderColumn>
                             <TableHeaderColumn>Address</TableHeaderColumn>
                         </TableRow>
                     </TableHeader>
@@ -50,7 +51,7 @@ class List extends Component {
                                         <TableRowColumn>{m.name}</TableRowColumn>
                                         <TableRowColumn>{m.blood}</TableRowColumn>
                                         <TableRowColumn>{m.number}</TableRowColumn>
-                                        <TableRowColumn>{m.date}</TableRowColumn>
+                                        <TableRowColumn>{m.email}</TableRowColumn>
                                         <TableRowColumn>{m.address}</TableRowColumn>
                                     </TableRow>
                                 </TableBody>
