@@ -7,7 +7,8 @@ const initialState = {
     sentData: "false",
     getData: "false",
     dataArray: [],
-    signout: "false"
+    signout: "false",
+    sendDataSucess : "false"
 }
 
 const authReducer = (state = initialState, action) => {
@@ -16,7 +17,7 @@ const authReducer = (state = initialState, action) => {
             return Object.assign({}, initialState, { Signup: "true", rigister: "true" })
 
         case Actions.login:
-            return Object.assign({}, state, { login: "true" })
+            return Object.assign({}, state, { login: "true" , rigister : "true" })
 
         case Actions.sentData:
             return Object.assign({}, state, { sentData: "true" })
@@ -27,6 +28,7 @@ const authReducer = (state = initialState, action) => {
         case Actions.signout:
             return Object.assign({}, state, { signout: "true" })
 
+            
 
         default:
             return state

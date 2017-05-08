@@ -43,9 +43,8 @@ class Login extends Component {
 
     componentWillReceiveProps(prop) {
         if (prop.login !== false) {
-            browserHistory.push('/home')
-        }
-    }
+            browserHistory.push('/home')        
+    }}
 
     loginUser() {
         let emailAndPass = {
@@ -58,6 +57,7 @@ class Login extends Component {
     render() {
         return (
             <div>
+
 
             <Paper style={style} zDepth={5} rounded={false}>
 
