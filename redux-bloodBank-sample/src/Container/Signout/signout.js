@@ -3,8 +3,6 @@ import Firebase from "../../store/Middleware/firebase"
 import { connect } from "react-redux"
 import { browserHistory } from "react-router"
 
-
-
 function mapStateToProps(state) {
     return {
         signout: state
@@ -19,8 +17,6 @@ function mapDispatchToProps(dispatch) {
         }
     }
 }
-
-
 
 class Signout extends Component {
     componentWillReceiveProps(logoutprop) {
@@ -40,9 +36,5 @@ class Signout extends Component {
             </div>
         );
     }
-
-
-
-
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Signout)

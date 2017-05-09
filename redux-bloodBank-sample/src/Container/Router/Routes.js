@@ -8,9 +8,6 @@ import List from "../DonerList/List"
 import Signout from "../Signout/signout"
 import Design from "../../Component/Material/AppBarDesign"
 import Home from "../../Component/Material/Home"
-import ThankYou from "../../Component/Material/ThankYou"
-
-
 
 class Routes extends Component {
     render() {
@@ -22,12 +19,9 @@ class Routes extends Component {
                 <Route path="/donorForm" component={Form} />
                 <Route path="/donorList" component={List} />
                 <Route path="/logout" component={Signout} />
-                <Route path="/home" component={Design}/>
-                <Route path ="/thankyou" component={ThankYou}/>
-                
+                <Route path="/home" component={Design} />
             </Router>
         );
     }
 }
-
 export default Routes

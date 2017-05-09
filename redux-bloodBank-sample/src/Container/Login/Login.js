@@ -13,11 +13,6 @@ const style = {
   display: 'inline-block',
 };
 
-
-
-
-
-
 function mapStateToProps(state) {
     return {
 

@@ -6,7 +6,6 @@ class Firebase {
         return (dispatch) => {
             let auth = firebase.auth();
             auth.createUserWithEmailAndPassword(userInfo.email, userInfo.pass).then(() => {
-                console.log("hogya");
                 dispatch(Actions.signupAction())
             })
         }
@@ -16,7 +15,6 @@ class Firebase {
         return (dispatch) => {
             let auth = firebase.auth();
             auth.signInWithEmailAndPassword(userIdPass.email, userIdPass.pass).then(() => {
-                console.log("Login done");
                 dispatch(Actions.loginAction())
             })
         }
@@ -25,8 +23,6 @@ class Firebase {
     static sendingDataToFirebase(data) {
         return (dispatch) => {
             let database = firebase.database().ref().child("dataUsingRedux");
-
-            console.log(data)
             database.push(data);
             dispatch(Actions.sentDataAction())
         }
@@ -40,9 +36,7 @@ class Firebase {
                 let data = object.val();
                 for (var a in data) {
                     arrdata.push(data[a].donorInfo);
-                    console.log("object arha hai", arrdata)
                 }
-                //   console.log("arraraa " , arrdata) 
                 dispatch(Actions.gettingDataAction(arrdata));
             });
         }
@@ -53,13 +47,9 @@ class Firebase {
 
             let auth = firebase.auth();
             auth.signOut().then(() => {
-                console.log("signout Successfull")
             })
             dispatch(Actions.signoutUser())
         }
     }
-
-
-
 }
 export default Firebase;

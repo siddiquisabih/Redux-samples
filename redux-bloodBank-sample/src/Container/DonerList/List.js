@@ -4,15 +4,13 @@ import Firebase from "../../store/Middleware/firebase"
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from "material-ui"
 import Design from "../../Component/Material/AppBarDesign"
 
-
-
 function mapStateToProps(state) {
     return {
         listState: state.dataArray
     }
 }
 function mapDispatchToProps(dispatch) {
-    return{
+    return {
         getList: () => {
             dispatch(Firebase.fetchDataFromFirebase())
         }
@@ -22,13 +20,8 @@ function mapDispatchToProps(dispatch) {
 class List extends Component {
     render() {
         return (
-
-
-
             <div>
-               
-            <Design list={this.props.getList}/>
-
+                <Design list={this.props.getList} />
                 <Table>
                     <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
                         <TableRow>

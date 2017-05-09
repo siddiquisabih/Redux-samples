@@ -4,11 +4,9 @@ import { Provider } from "react-redux"
 import store from "./store"
 import * as firebase from "firebase"
 import Routes from "./Container/Router/Routes"
-import {MuiThemeProvider} from "material-ui"
+import { MuiThemeProvider } from "material-ui"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
-// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
 // Initialize Firebase
 var config = {
@@ -20,17 +18,13 @@ var config = {
   messagingSenderId: "560849097238"
 };
 firebase.initializeApp(config);
-
 injectTapEventPlugin();
 
 ReactDOM.render(
-
   <Provider store={store}>
-  <MuiThemeProvider>
-    <Routes />
-</MuiThemeProvider>
-  </Provider>
-  
-  ,
+    <MuiThemeProvider>
+      <Routes />
+    </MuiThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );

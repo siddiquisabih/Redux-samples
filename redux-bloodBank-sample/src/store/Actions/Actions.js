@@ -5,6 +5,7 @@ class Actions {
     static getData = "gettingData"
     static signout = "Signout"
     static sentData = "dataSent"
+    static error = "Error"
 
     static signupAction() {
         return {
@@ -18,19 +19,16 @@ class Actions {
         }
     }
 
-
     static sentDataAction() {
         return {
             type: Actions.sentData
         }
     }
 
-
     static gettingDataAction(value) {
         return {
             type: Actions.getData,
             data: value
-
         }
     }
 
@@ -39,12 +37,6 @@ class Actions {
             type: Actions.signout
         }
     }
-
-
-
-    
-
-
 }
 
 
